@@ -1,0 +1,60 @@
+.logo {
+  height: 100px;
+  width: 100px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 100px;
+
+  span {
+    font-size: 25px;
+    position: relative;
+
+    @mixin logohr {
+      content: '';
+      height: 2px;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      background-color: #000000;
+      -webkit-animation-duration: 1s; /*动画持续时间*/
+      -webkit-animation-iteration-count: 1; /*动画次数*/
+      -webkit-animation-delay: .5s; /*延迟时间*/
+    }
+
+    
+    &:hover {
+     width: 0;
+
+     &:before {
+      width: 0px;
+    }
+
+    &:after {
+      width: 0px;
+      left: 100%;
+    }
+  }
+
+  &:before {
+   @include logohr;
+   top: -3px;
+   -webkit-animation-name: progress; /*动画名称*/
+   transition: width .5s linear;
+ }
+ &:after {
+   @include logohr;
+   bottom: -4px;
+   -webkit-animation-name: left; /*动画名称*/
+   transition: all .5s linear;
+ }
+
+}
+@-webkit-keyframes progress {
+  from {width: 0}
+  to {width: 100%}
+}
+@-webkit-keyframes left {
+  from {width: 0;left:100%;}
+  to {width: 100%;left:0;}
+}
+}

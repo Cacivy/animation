@@ -1,0 +1,21 @@
+.search{
+  width: 210px;
+  float: right;
+  line-height: 80px;
+  margin-right: 8%;
+
+  #search{
+    width:120px;
+    height:30px;
+    padding: 0px 15px 0px 15px;
+    border: 1px solid #eee;
+    border-radius:25px;
+    outline: none;
+    float: right;
+    transition:width .6s,border .5s;
+  }
+  #search:focus{
+    width: 150px;
+    border: 2px solid #0099FF;
+  }
+}

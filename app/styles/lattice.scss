@@ -1,0 +1,55 @@
+.lattice {
+  $max-width: 1080px;
+  $width: $max-width/5-2px;
+  $img-width: 72px;
+  $p-width: 70px;
+  $img-padding: ($width - $img-width)/2;
+  $bg-white: #fff;
+  
+  background-color: $bg-white;
+  border: 1px solid #eee;
+  width: $width;
+  height: $width;
+  overflow: hidden;
+
+  img {
+    width: $img-width;
+    height: $img-width;
+    padding: $img-padding - 15px $img-padding 0px;
+  }
+
+  p {
+    height: $p-width;
+    line-height: $p-width;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .bottom {
+    text-align: center;
+
+    div>span {
+      padding: 5px 15px;
+      height: 24px;
+      line-height: 24px;
+      border-radius: 12px;
+      border: 1px solid #ddd;
+      background-color: #f8f8f8;
+    }
+  }
+  
+  .content {
+    cursor: pointer;
+    height: $width+20px;
+    overflow: hidden;
+    transition: margin-top .3s;
+    -webkit-transition: margin-top .3s;
+  }
+
+  &:hover {
+    .content {
+      margin-top: -150px;
+    }
+  }
+
+}
