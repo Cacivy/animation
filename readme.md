@@ -6,6 +6,7 @@
 
 ```bash
 npm i
+bower i
 gulp serve
 ```
 
