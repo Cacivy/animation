@@ -5,12 +5,11 @@
 ### dev
 
 ```bash
+npm i
 gulp serve
 ```
 
 ### show
-
-![](screenshots/animation.gif)
 
 ![](screenshots/material.gif)
 
