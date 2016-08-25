@@ -1,0 +1,44 @@
+.nav-move {
+	$width: 100px;
+	$height: 40px;
+
+	position: relative;
+
+	ul {
+		margin: 0;
+		padding: 0;
+		height: $height;
+
+		li {
+			width: $width;
+			// height: $height;
+			line-height: $height;
+			text-align: center;
+			color: #fff;
+			float: left;
+			background: #2795EE;
+		}
+
+		@for $i from 1 through 4 {
+			li:nth-of-type(#{$i}) { 
+				&:hover {
+					& ~ .block {
+						left: ($i - 1) * $width;
+					}
+				}
+			}
+		}
+	}
+
+	
+
+	.block {
+		width: $width;
+		height: 3px;
+		background: #e344a6;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		-webkit-transition: left .5s;
+	}
+}

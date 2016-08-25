@@ -18,5 +18,7 @@ gulp serve
 
 ![](screenshots/logo.gif)
 
+![](screenshots/nav-move.gif)
+
 
 
