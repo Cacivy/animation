@@ -17,6 +17,7 @@
 			color: #fff;
 			float: left;
 			background: #2795EE;
+			cursor: pointer;
 		}
 
 		@for $i from 1 through 4 {
@@ -39,6 +40,6 @@
 		position: absolute;
 		left: 0;
 		bottom: 0;
-		-webkit-transition: left .5s;
+		-webkit-transition: left .3s;
 	}
 }
