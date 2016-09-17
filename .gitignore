@@ -48,6 +48,6 @@ Temporary Items
 build/
 node_modules/
 dist/
-.tmp/*
+.tmp/
 *.log
 
